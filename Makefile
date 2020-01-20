@@ -11,7 +11,7 @@ default: init main
 main:
 	$(CC) $(CXXFLAGS) -c src/main.cpp -o build/main.o
 	$(CC) $(CXXFLAGS) -o build/main build/main.o
-build_test:
+build_test: default
 	$(CC) $(CXXFLAGS) -c test/test_greeter.cpp -o build/test_greeter.o
 	$(CC) $(CXXFLAGS) -o build/test_greeter build/test_greeter.o
 clean:
